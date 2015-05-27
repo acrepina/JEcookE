@@ -1,15 +1,14 @@
-package step3.model;
+package model;
 
-
-public class RecipeModelBean {
+public class RecipeModel {
 	private String title;
 	private String description;
 	private int expertise;
 	private int nbpeople;
 	private int duration;
 	private String type;
-	public RecipeModelBean() {}
-	public RecipeModelBean(String title,String description,int expertise,int
+	public RecipeModel() {}
+	public RecipeModel(String title,String description,int expertise,int
 			duration,int nbpeople,String type) {
 		this.title = title;
 		this.description = description;

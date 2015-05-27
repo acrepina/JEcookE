@@ -1,4 +1,4 @@
-package step4.processing;
+package processing;
 
 import java.util.Map;
 
@@ -7,11 +7,11 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
-import step4.dao.fabric.DaoFabric;
-import step4.dao.instance.UserDao;
-import step4.model.LoginBean;
-import step4.model.UserModelBean;
-import step4.model.UserSubmissionModelBean;
+import model.LoginBean;
+import model.UserModelBean;
+import model.UserSubmissionModelBean;
+import dao.fabric.DaoFabric;
+import dao.instance.UserDao;
 
 @ManagedBean
 @ApplicationScoped // Utilisation de application scope afin d'offrir un point d'entrée unique à l'ensemble des clients

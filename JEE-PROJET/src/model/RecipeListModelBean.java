@@ -1,4 +1,4 @@
-package step4.model;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;

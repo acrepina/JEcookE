@@ -1,11 +1,11 @@
-package step4.dao.instance;
+package dao.instance;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import step4.model.UserModelBean;
+import model.UserModelBean;
 
 
 public class UserDao {

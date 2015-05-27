@@ -1,7 +1,8 @@
-package step3.dao.fabric;
+package dao.fabric;
 
-import step3.dao.instance.RecipesDao;
-import step3.dao.instance.UserDao;
+import dao.instance.RecipesDao;
+import dao.instance.UserDao;
+
 
 public final class DaoFabric {
 	// L'utilisation du mot clé volatile permet, en Java version 5 et supérieur,

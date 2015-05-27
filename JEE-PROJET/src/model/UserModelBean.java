@@ -1,4 +1,4 @@
-package step4.model;
+package model;
 
 import java.io.Serializable;
 
