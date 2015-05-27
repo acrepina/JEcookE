@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="/pages/template.xhtml">
+
+	<ui:define name="subtitle">
+		Inscription 
+	</ui:define>
+
+	<ui:define name="body">
+		<table>
+			<tr>
+				<td>Prénom</td>
+				<td><h:inputText id="userSurname" value="#{UserSubmissionModelBean.surname}"
+						required="true">
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td>Nom</td>
+				<td><h:inputText id="userLastname" value="#{UserSubmissionModelBean.lastname}"
+						required="true">
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><h:inputText id="userAge" value="#{UserSubmissionModelBean.age}"
+						required="true">
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td>Login</td>
+				<td><h:inputText id="userLogin" value="#{UserSubmissionModelBean.login}"
+						required="true">
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td>Mot de passe</td>
+				<td><h:inputText id="userPwd" value="#{UserSubmissionModelBean.pwd}"
+						required="true">
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><h:commandButton value="OK"
+						action="#{userControlerBean.checkAndAddUser(UserSubmissionModelBean)}" /></td>
+			</tr>
+		</table>
+	</ui:define>
+</ui:composition>
