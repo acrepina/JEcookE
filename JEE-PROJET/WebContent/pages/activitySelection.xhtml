@@ -8,10 +8,22 @@
 <title>Cook ME - Sélection de l'activité</title>
 </head>
 <body>
-	<h:form>
-		<h:commandButton action="#{some_action}" image="/step4/img/btn/emergency_btn.PNG" />
-		<h:commandButton action="#{some_action}" image="/step4/img/btn/recipes_btn.PNG" />
-		<h:commandButton action="#{some_action}" image="/step4/img/btn/shop_btn.PNG" />
-	</h:form>
+
+	<div id="content">
+		<h:form>
+			<h:commandButton action="#{some_action}"
+				image="/ressources/img/btn/emergency_btn.PNG" />
+			<h:commandButton action="#{some_action}"
+				image="/ressources/img/btn/recipes_btn.PNG" />
+			<h:commandButton action="#{some_action}"
+				image="/ressources/img/btn/shop_btn.PNG" />
+		</h:form>
+	</div>
+
+
+	<div id="footer">
+		<h:outputText value="Copyright &copy; all right reserved"/>
+		<h:graphicImage library="img" name="logo.PNG"/>
+	</div>
 </body>
 </html>
