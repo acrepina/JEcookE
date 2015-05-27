@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+	<title>Step2: Form</title>
+</head>
+<body>
+	<h1>User Display</h1>
+	<h:form>
+		<table border="0">
+			<tr>
+				<td>Your Login</td>
+				<td><h:outputText value="#{loggedUser.login}" /></td>
+			</tr>
+			<tr>
+				<td>Your surname</td>
+				<td><h:outputText value="#{loggedUser.surname}" /></td>
+			</tr>
+			<tr>
+				<td>Your lastname</td>
+				<td><h:outputText value="#{loggedUser.lastname}" /></td>
+			</tr>
+			<tr>
+				<td>Your age</td>
+				<td><h:outputText value="#{loggedUser.age}" /></td>
+			</tr>
+		</table>
+	</h:form>
+</body>
+</html>
