@@ -12,7 +12,7 @@ import model.UserModelBean;
 import model.UserSubmissionModelBean;
 import dao.fabric.DaoFabric;
 import dao.instance.UserDao;
-
+import java.util.regex.*;
 @ManagedBean
 @ApplicationScoped // Utilisation de application scope afin d'offrir un point d'entrée unique à l'ensemble des clients
 public class UserControlerBean {
@@ -41,10 +41,19 @@ public class UserControlerBean {
 		}
 	}
 	
-	public void checkAndAddUser(UserSubmissionModelBean userSubmitted){
+	public String checkAndAddUser(UserSubmissionModelBean userSubmitted){
 		//Vérifier les propriétés de l'utilisateur
-		//TODO
+//		 First Name / Last Name : autorisé [a-zA-Z0-9]
+//		 Age : uniquement des entiers <100
+//		 Email Address: autorisé [a-zA-Z0-9-._]+@[a-zA-Z0-9-._].[a-z]+
+//		 Login: autorisé [a-zA-Z0-9-._]
+//		 Password: identique à Re-enter Password
+//		 En cas d’erreur la valeur du champ en erreur devra être en rouge
+		
+		
+		
 		//ajout de l'utilisateur à la base de données
 		this.userDao.addUser(userSubmitted);
+		return "/pages/activitySelection.xhtml";
 	}
 }

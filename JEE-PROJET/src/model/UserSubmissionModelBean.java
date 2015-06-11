@@ -8,6 +8,11 @@ import javax.faces.bean.RequestScoped;
 //même propriétés que UserModelBean mais portée différente
 
 public class UserSubmissionModelBean extends UserModelBean{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public UserSubmissionModelBean() {
 	}
 }
