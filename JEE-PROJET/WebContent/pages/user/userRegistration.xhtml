@@ -11,48 +11,32 @@
 
 	<ui:define name="body">
 		<h:form>
-			<table>
-				<tr>
-					<td><h:outputLabel id="userSurnameLabel" for="userSurname"
-							value="Prénom" /></td>
-					<td><h:inputText id="userSurname" label="3 lettres mini"
-							value="#{userSubmissionModelBean.surname}" required="true">
-						</h:inputText></td>
-				</tr>
-				<tr>
-					<td><h:outputLabel id="userLastnameLabel" for="userLastname"
-							value="Nom" /></td>
-					<td><h:inputText id="userLastname"
-							value="#{userSubmissionModelBean.lastname}" required="true">
-						</h:inputText></td>
-				</tr>
-				<tr>
-					<td><h:outputLabel id="userAgeLabel" for="userAge"
-							value="Age" /></td>
-					<td><h:inputText id="userAge"
-							value="#{userSubmissionModelBean.age}" required="true">
-						</h:inputText></td>
-				</tr>
-				<tr>
-					<td><h:outputLabel id="userLoginLabel" for="userLogin"
-							value="Login" /></td>
-					<td><h:inputText id="userLogin"
-							value="#{userSubmissionModelBean.login}" required="true">
-						</h:inputText></td>
-				</tr>
-				<tr>
-					<td><h:outputLabel id="userPwdLabel" for="userPwd"
-							value="Mot de passe" /></td>
-					<td><h:inputText id="userPwd"
-							value="#{userSubmissionModelBean.pwd}" required="true">
-						</h:inputText></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><h:commandButton value="OK"
-							action="#{userControlerBean.checkAndAddUser(userSubmissionModelBean)}" /></td>
-				</tr>
-			</table>
+			<h:table>
+				<h:tr>
+					<h:td><h:outputLabel id="userSurnameLabel" for="userSurname" value="Prénom" /></h:td>
+					<h:td><h:inputText id="userSurname" label="3 lettres mini" value="#{userSubmissionModelBean.surname}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td><h:outputLabel id="userLastnameLabel" for="userLastname" value="Nom" /></h:td>
+					<h:td><h:inputText id="userLastname" value="#{userSubmissionModelBean.lastname}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td><h:outputLabel id="userAgeLabel" for="userAge" value="Age" /></h:td>
+					<h:td><h:inputText id="userAge" value="#{userSubmissionModelBean.age}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td><h:outputLabel id="userLoginLabel" for="userLogin" value="Login" /></h:td>
+					<h:td><h:inputText id="userLogin" value="#{userSubmissionModelBean.login}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td><h:outputLabel id="userPwdLabel" for="userPwd" value="Mot de passe" /></h:td>
+					<h:td><h:inputText id="userPwd" value="#{userSubmissionModelBean.pwd}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td></h:td>
+					<h:td><h:commandButton value="OK" action="#{userControlerBean.checkAndAddUser(userSubmissionModelBean)}" /></h:td>
+				</h:tr>
+			</h:table>
 		</h:form>
 	</ui:define>
 </ui:composition>

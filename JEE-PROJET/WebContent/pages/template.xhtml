@@ -3,49 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
-<head>
-<title>Cook ME</title>
-</head>
-<body>
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
-	<div class="header">
-		<h1>Cook ME</h1>
-		<h2>
-			<ui:insert name="subtitle">Default section title</ui:insert>
-		</h2>
 
-		<div class="registration"></div>
-		<div class="login">
-			<h:form>
-				<table border="0">
-					<tr>
-						<td>Your Login</td>
-						<td><h:inputText id="userlogin" value="#{loginBean.login}"
-								required="true">
-							</h:inputText></td>
-					</tr>
-					<tr>
-						<td>Your Password</td>
-						<td><h:inputSecret value="#{loginBean.pwd}" /></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><h:commandButton value="OK"
-								action="#{userControlerBean.checkUser(loginBean)}" /></td>
-					</tr>
-				</table>
-			</h:form>
+	<h:body>
+		<!-- head -->
+		<ui:include src="/pages/head.xhtml" />
+
+		<!-- core -->
+		<div class="core">
+			<ui:insert name="body">Default section content</ui:insert>
 		</div>
-	</div>
+	
+		<!-- footer -->
+		<ui:include src="pages/footer.xhtml" />
+		
+	</h:body>
 
-	<div class="core">
-		<ui:insert name="body">Default section content</ui:insert>
-	</div>
-
-	<div id="footer">
-		<h:outputText value="Copyright &copy; all right reserved" />
-		<h:graphicImage library="img" name="logo.PNG" />
-	</div>
-</body>
 </html>

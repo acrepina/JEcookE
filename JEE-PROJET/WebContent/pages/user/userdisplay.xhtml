@@ -3,31 +3,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
-<head>
-	<title>Step2: Form</title>
-</head>
-<body>
-	<h1>User Display</h1>
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+
+
+	<h:h1>User Display</h:h1>
 	<h:form>
-		<table border="0">
-			<tr>
-				<td>Your Login</td>
-				<td><h:outputText value="#{loggedUser.login}" /></td>
-			</tr>
-			<tr>
-				<td>Your surname</td>
-				<td><h:outputText value="#{loggedUser.surname}" /></td>
-			</tr>
-			<tr>
-				<td>Your lastname</td>
-				<td><h:outputText value="#{loggedUser.lastname}" /></td>
-			</tr>
-			<tr>
-				<td>Your age</td>
-				<td><h:outputText value="#{loggedUser.age}" /></td>
-			</tr>
-		</table>
+		<h:table border="0">
+			<h:tr>
+				<h:td>Your Login</h:td>
+				<h:td><h:outputText value="#{loggedUser.login}" /></h:td>
+			</h:tr>
+			<h:tr>
+				<h:td>Your surname</h:td>
+				<h:td><h:outputText value="#{loggedUser.surname}" /></h:td>
+			</h:tr>
+			<h:tr>
+				<h:td>Your lastname</h:td>
+				<h:td><h:outputText value="#{loggedUser.lastname}" /></h:td>
+			</h:tr>
+			<h:tr>
+				<h:td>Your age</h:td>
+				<h:td><h:outputText value="#{loggedUser.age}" /></h:td>
+			</h:tr>
+		</h:table>
 	</h:form>
-</body>
+
+
 </html>

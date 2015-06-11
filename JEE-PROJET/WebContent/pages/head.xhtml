@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+		
+
+
+<h:head>
+<h:title>Cook ME</h:title>
+</h:head>
+
+<h:nav>
+	<div class="header">
+		<h:h1>Cook ME</h:h1>
+		<h:h2>
+			<ui:insert name="subtitle">Default section title</ui:insert>
+		</h:h2>
+	
+		<div class="registration"></div>
+		<div class="login">
+			<h:form>
+				<h:table border="0">
+					<h:tr>
+						<h:td>Your Login</h:td>
+						<h:td><h:inputText id="userlogin" value="#{loginBean.login}"required="true"></h:inputText></h:td>
+					</h:tr>
+					<h:tr>
+						<h:td>Your Password</h:td>
+						<h:td><h:inputSecret value="#{loginBean.pwd}" /></h:td>
+					</h:tr>
+					<h:tr>
+						<h:td></h:td>
+						<h:td><h:commandButton value="OK" action="#{userControlerBean.checkUser(loginBean)}" /></h:td>
+					</h:tr>
+				</h:table>
+			</h:form>
+		</div>
+	</div>
+</h:nav>
+
+</html>
