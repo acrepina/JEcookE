@@ -1,6 +1,8 @@
 package dao.instance;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -60,6 +62,42 @@ public class RecipesDao {
 			}
 			rs.close();
 			query.close	();
+			
+			
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return recipeList;
+	}
+	
+	public ArrayList<RecipeModel> getRecipes(int temps, int expert, int nmb_perso, String type ) {
+		//return value
+		ArrayList<RecipeModel> recipeList = new ArrayList<RecipeModel>();
+		
+		try {
+			// create connection
+			connection = java.sql.DriverManager.getConnection("jdbc:mysql://" + dB_HOST + ":" + dB_PORT + "/" + dB_NAME, dB_USER, dB_PWD);
+			
+			String selectSQL = "SELECT * FROM recipes WHERE expertise=? AND duration=? AND nbpeople=? AND type=?";
+			PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
+			preparedStatement.setInt(1,expert);
+			preparedStatement.setInt(2,temps);
+			preparedStatement.setInt(3,nmb_perso);
+			preparedStatement.setString(4,type);
+			ResultSet rs = preparedStatement.executeQuery(selectSQL );
+			
+			RecipeModel r;
+			 
+            //System.out.println(listItems);   
+			//java.sql.ResultSet rs = query.executeQuery( "SELECT * FROM recipes WHERE expertise={0},duration={1},nbpeople={2}, type={3}",expert,temps,nmb_perso,type );
+			while (	rs.next() )
+			{
+				r = new RecipeModel(rs.getString("title"), rs.getString("description"), rs.getInt("expertise"), rs.getInt("duration"), rs.getInt("nbpeople"), rs.getString("type"));
+				recipeList.add(r);
+			}
+			rs.close();
+			preparedStatement.close	();
 			
 			
 			connection.close();

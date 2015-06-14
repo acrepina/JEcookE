@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" template="/pages/template.xhtml">
+
+	<ui:define name="subtitle">
+		Inscription 
+	</ui:define>
+
+	<ui:define name="body">
+		<h:form>
+			<h:table>
+				<h:tr>
+					<h:td><h:outputLabel id="userSurnameLabel" for="userSurname" value="Prénom" /></h:td>
+					<h:td><h:inputText id="userSurname" label="3 lettres mini" value="#{userSubmissionModelBean.surname}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td><h:outputLabel id="userLastnameLabel" for="userLastname" value="Nom" /></h:td>
+					<h:td><h:inputText id="userLastname" value="#{userSubmissionModelBean.lastname}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td><h:outputLabel id="userAgeLabel" for="userAge" value="Age" /></h:td>
+					<h:td><h:inputText id="userAge" value="#{userSubmissionModelBean.age}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td><h:outputLabel id="userLoginLabel" for="userLogin" value="Login" /></h:td>
+					<h:td><h:inputText id="userLogin" value="#{userSubmissionModelBean.login}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td><h:outputLabel id="userPwdLabel" for="userPwd" value="Mot de passe" /></h:td>
+					<h:td><h:inputText id="userPwd" value="#{userSubmissionModelBean.pwd}" required="true"></h:inputText></h:td>
+				</h:tr>
+				<h:tr>
+					<h:td></h:td>
+					<h:td><h:commandButton value="OK" action="#{userControlerBean.checkAndAddUser(userSubmissionModelBean)}" /></h:td>
+				</h:tr>
+			</h:table>
+		</h:form>
+	</ui:define>
+</ui:composition>
