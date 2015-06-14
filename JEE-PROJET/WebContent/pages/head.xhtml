@@ -8,37 +8,39 @@
 		
 
 
-<h:head>
-<h:title>Cook ME</h:title>
-</h:head>
+<head>
+<title>Cook ME</title>
+</head>
 
-<h:nav>
+
 	<div class="header">
-		<h:h1>Cook ME</h:h1>
-		<h:h2>
+		<h1>Cook ME</h1>
+		<h2>
 			<ui:insert name="subtitle">Default section title</ui:insert>
-		</h:h2>
+		</h2>
 	
 		<div class="registration"></div>
 		<div class="login">
-			<h:form>
-				<h:table border="0">
-					<h:tr>
-						<h:td>Your Login</h:td>
-						<h:td><h:inputText id="userlogin" value="#{loginBean.login}"required="true"></h:inputText></h:td>
-					</h:tr>
-					<h:tr>
-						<h:td>Your Password</h:td>
-						<h:td><h:inputSecret value="#{loginBean.pwd}" /></h:td>
-					</h:tr>
-					<h:tr>
-						<h:td></h:td>
-						<h:td><h:commandButton value="OK" action="#{userControlerBean.checkUser(loginBean)}" /></h:td>
-					</h:tr>
-				</h:table>
-			</h:form>
+			<form>
+				<table border="0">
+					<tr>
+						<td>Your Login</td>
+						<td><h:inputText id="userlogin" value="#{loginBean.login}"
+								required="true">
+							</h:inputText></td>
+					</tr>
+					<tr>
+						<td>Your Password</td>
+						<td><h:inputSecret value="#{loginBean.pwd}" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><h:commandButton value="OK" action="#{userControlerBean.checkUser(loginBean)}" /></td>
+					</tr>
+				</table>
+			</form>
 		</div>
 	</div>
-</h:nav>
+
 
 </html>
