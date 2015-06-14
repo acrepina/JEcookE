@@ -5,20 +5,21 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 
-	<h:h1>Login Page</h:h1>
+	<h1>Login Page</h1>
 	<h:form>
-		<h:table border="0">
-			<h:tr>
-				<h:td>Your Login</h:td>
-				<h:td><h:inputText id="userlogin" value="#{loginBean.login}" required="true"></h:inputText></h:td>
-			</h:tr>
-			<h:tr>
-				<h:td>Your Password</h:td>
-				<h:td><h:inputSecret value="#{loginBean.pwd}" /></h:td></h:tr>
-			<h:tr>
-				<h:td><h:commandButton value="OK" action="#{userControlerBean.checkUser(loginBean)}" /></h:td>
-			</h:tr>
-		</h:table>
+		<table border="0">
+			<tr>
+				<td>Your Login</td>
+				<td><h:inputText id="userlogin" value="#{loginBean.login}" required="true"></h:inputText></td>
+			</tr>
+			<tr>
+				<td>Your Password</td>
+				<td><h:inputSecret value="#{loginBean.pwd}" /></td>
+			</tr>
+			<tr>
+				<td><h:commandButton value="OK" action="#{userControlerBean.checkUser(loginBean)}" /></td>
+			</tr>
+		</table>
 	</h:form>
 
 </html>
