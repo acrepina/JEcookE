@@ -4,32 +4,53 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
-	 template="/pages/template.xhtml">
+	xmlns:p="http://primefaces.org/ui" template="/pages/template.xhtml">
 
 	<ui:define name="subtitle">
 		Recipies 
 	</ui:define>
 
 	<ui:define name="body">
-		
+
 		<h:form>
 			<h:outputText value="Coock expertise" />
 			<p:rating value="#{ratingView.rating1}" />
 		</h:form>
 
+		<p>
+			Preparation Duration
+			<h:form>
+				<p:spinner></p:spinner>
+			</h:form>
+		</p>
+
+
+		<h:form>
+			<p>
+				<h:panelGrid columns="1" style="margin-bottom: 5px">
+					<h:outputText id="displayRange"
+						value="Between #{sliderView.number6} and #{sliderView.number7} persone(s)" />
+					<p:slider for="txt6,txt7" display="displayRange"
+						style="width: 350px" range="true"
+						displayTemplate="Between {min} and {max}" />
+				</h:panelGrid>
+				<h:inputHidden id="txt6" value="#{sliderView.number6}" />
+				<h:inputHidden id="txt7" value="#{sliderView.number7}" />
+			</p>
+		</h:form>
+
+
 
 
 		<p>
 			<h:form>
-
 				<h:panelGrid columns="3" cellpadding="5">
 					<h:outputLabel for="menu" value="Coock Type" />
 					<p:selectCheckboxMenu id="menu"
-						value="#{checkboxView.selectedCities}" label="Cities"
+						value="#{checkboxView.selectedCities}" label="Type"
 						filter="true" filterMatchMode="startsWith"
 						panelStyle="width:250px">
-						<f:selectItems value="#{checkboxView.cities}" />
+						<f:selectItems value="toto;yu" />
 					</p:selectCheckboxMenu>
 					<p:commandLink value="Submit" update="display" />
 				</h:panelGrid>
@@ -39,7 +60,7 @@
 
 				</p:outputPanel>
 			</h:form>
-		</p>  
+		</p>
 
 
 	</ui:define>
